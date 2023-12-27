@@ -1,3 +1,15 @@
+// Dear programmer:
+// When I wrote this code, only god and I knew how it worked.
+// Now, only god knows it!
+//
+// Therefore, if you are trying to optimize this routine
+// and it fails (most surely),
+// please increase this counter as a 
+// warning for the next person:
+//
+// total hours wated here = 197
+
+
 #define F_CPU 16000000UL				//non necessaria
 #include <avr/io.h>						//necessaria per gestire PORT e PIN
 #include <avr/interrupt.h>				//necessaria per gestire sei()
@@ -204,7 +216,7 @@ void reset_timer()
 	// Eventuali altre operazioni di reset necessarie
 }
 void timer0(){
-	TCCR0A = 1<<WGM01;       //modalità ctc
+	TCCR0A = 1<<WGM01;       //modalitÃ  ctc
 	TCCR0B = 1<<CS00;       //prescaler a 1 (conteggio a 16MHZ)
 	TIMSK0 = 1<<OCIE0A;     // interrupt compermatch
 	OCR0A = 160;
